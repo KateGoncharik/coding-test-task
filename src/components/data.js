@@ -1,7 +1,7 @@
 const inputsData = [
   { name: 'website', placeholder: 'avc.ru', label: './src/assets/icons/global.png' },
   { name: 'vk', placeholder: 'vk.com/shans', label: './src/assets/icons/vk.png' },
-  { name: 'ok', placeholder: 'ok.com/shans', label: './src/assets/icons/odnk.png' },
+  { name: 'ok', placeholder: 'ok.com/shans', label: './src/assets/icons/ok.png' },
   { name: 'fb', placeholder: 'facebook.com/shans', label: './src/assets/icons/fb.png' },
   { name: 'inst', placeholder: 'instagram.com/shans', label: './src/assets/icons/inst.png' },
   { name: 'youtube', placeholder: 'youtube.com/shans', label: './src/assets/icons/youtube.png' },

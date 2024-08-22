@@ -1,13 +1,15 @@
 import { Component } from '../component.js';
-import { becomeMemberForm } from './form.js';
+import { createBecomeMemberForm } from './form.js';
 
-const authFormTitle = new Component({
-  tag: 'h2',
-  text: 'Стань партнёром проекта',
-  className: 'become-membre-form-title',
-});
-const modalContainer = new Component({ className: 'modal-container' }, authFormTitle, becomeMemberForm);
+const createModalWindow = () => {
+  const authFormTitle = new Component({
+    tag: 'h2',
+    text: 'Стань партнёром проекта',
+    className: 'become-member-form-title',
+  });
+  const modalContainer = new Component({ className: 'modal-container' }, authFormTitle, createBecomeMemberForm());
 
-const modal = new Component({ tag: 'dialog', className: 'dialog' }, modalContainer);
+  return new Component({ tag: 'dialog', className: 'dialog' }, modalContainer);
+};
 
-export { modal };
+export { createModalWindow };
