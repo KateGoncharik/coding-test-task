@@ -1,11 +1,10 @@
 const inputsData = [
-  { name: 'website', placeholder: 'avc.ru', className: 'form-input', type: 'text' },
-  { name: 'vk', placeholder: 'vk.com/shans', className: 'form-input', type: 'text' },
-  { name: 'ok', placeholder: 'ok.com/shans', className: 'form-input', type: 'text' },
-  { name: 'fb', placeholder: 'facebook.com/shans', className: 'form-input', type: 'text' },
-  { name: 'inst', placeholder: 'instagram.com/shans', className: 'form-input', type: 'text' },
-  { name: 'youtube', placeholder: 'youtube.com/shans', className: 'form-input', type: 'text' },
-  { name: 'leader', placeholder: 'Александров Иван Васильевич', className: 'form-input', type: 'text' },
+  { name: 'website', placeholder: 'avc.ru', label: './src/assets/icons/global.png' },
+  { name: 'vk', placeholder: 'vk.com/shans', label: './src/assets/icons/vk.png' },
+  { name: 'ok', placeholder: 'ok.com/shans', label: './src/assets/icons/odnk.png' },
+  { name: 'fb', placeholder: 'facebook.com/shans', label: './src/assets/icons/fb.png' },
+  { name: 'inst', placeholder: 'instagram.com/shans', label: './src/assets/icons/inst.png' },
+  { name: 'youtube', placeholder: 'youtube.com/shans', label: './src/assets/icons/youtube.png' },
 ];
 
 const requiredInputsData = [

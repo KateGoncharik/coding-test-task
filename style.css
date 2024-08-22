@@ -1,3 +1,8 @@
+:root {
+  --pink: #e5266e;
+  --white: #ffffff;
+}
+
 .app {
   display: flex;
   justify-content: center;
@@ -6,9 +11,25 @@
 }
 
 .wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.write-button {
+  padding: 10%;
+  border: 1px solid var(--pink);
+  background-color: var(--white);
+  color: var(--pink);
+  transition: 1s;
+}
+
+.write-button:hover {
+  cursor: pointer;
+  background-color: var(--pink);
+  color: var(--white);
+  transition: 1s;
 }
 
 .dialog {
@@ -25,13 +46,29 @@
   gap: 5;
 }
 
-.form-input, .sphere-select {
+.form-input,
+.sphere-select {
   padding: 3%;
   margin: 1%;
+}
+
+.form-input {
+  display: flex;
+}
+
+.input-icon {
+  width: 25px;
+  height: 25px;
 }
 
 .form-header-inputs-wrapper {
   width: 50%;
   display: flex;
   flex-direction: column;
+}
+
+.become-member-button {
+  background-color: #e5266e;
+  color: white;
+  padding: 2%;
 }
