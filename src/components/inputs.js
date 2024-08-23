@@ -31,13 +31,16 @@ const createRequiredInputs = () => {
 };
 
 const createInputs = () => {
-  return inputsData.map((inputData) => {
-    const input = new Component({ tag: 'input', className: inputData.className });
-    input.setAttribute('name', inputData.name);
-    input.setAttribute('type', 'text');
-    input.setAttribute('placeholder', '✱');
-    return input;
-  });
+  return new Component(
+    { className: 'not-required-inputs-wrapper' },
+    ...inputsData.map((inputData) => {
+      const input = new Component({ tag: 'input', className: inputData.className });
+      input.setAttribute('name', inputData.name);
+      input.setAttribute('type', 'text');
+      input.setAttribute('placeholder', inputData.placeholder);
+      return input;
+    })
+  );
 };
 
 export { createRequiredInputs, createInputs, createUploadInput };

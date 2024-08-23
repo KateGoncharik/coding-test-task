@@ -23,16 +23,26 @@ export const createUploadInput = () => {
   const loadedPhotoPreviewWrapper = new Component({ className: 'loaded-photo-preview-wrapper' });
   const imgToPreview = new Component({
     tag: 'img',
+    className: 'preview-image',
   });
   imgToPreview.setAttribute('src', './src/assets/img/placeholder-image.png');
   imgToPreview.setAttribute('alt', 'Preview');
-  imgToPreview.setAttribute('id', 'img-to-preview');
 
-  const uploadInputText = new Component({
-    tag: 'span',
-    className: 'upload-input-text',
-    text: 'Выберите файл',
+  const uploadIcon = new Component({
+    tag: 'img',
   });
+  uploadIcon.setAttribute('src', './src/assets/icons/upload.png');
+  uploadIcon.setAttribute('alt', 'Upload Icon');
+  uploadIcon.setAttribute('class', 'upload-icon');
+
+  const uploadInputText = new Component(
+    {
+      tag: 'span',
+      className: 'upload-input-text',
+    },
+    uploadIcon,
+    new Component({ tag: 'span', text: 'Выберите файл' })
+  );
 
   const clearButton = new Component({ tag: 'button', className: 'clear-button', text: '✖' });
   clearButton.addListener('click', handleClearUpload);
@@ -46,7 +56,7 @@ export const createUploadInput = () => {
 };
 
 function handleUploadInputChange(event) {
-  const preview = document.getElementById('img-to-preview');
+  const preview = document.querySelector('.preview-image');
 
   const file = event.target.files[0];
 
@@ -64,7 +74,7 @@ function handleClearUpload(event) {
   event.preventDefault();
   event.stopPropagation();
   const input = document.querySelector('.upload-input');
-  const preview = document.getElementById('img-to-preview');
+  const preview = document.querySelector('.preview-image');
   const defaultImage = './src/assets/img/placeholder-image.png';
 
   input.value = '';

@@ -28,7 +28,7 @@ const createBecomeMemberForm = () => {
   return new Component(
     { tag: 'form', className: 'become-member-form' },
     createRequiredInputs(),
-    ...createInputs(),
+    createInputs(),
     new Component({ className: 'buttons-wrapper' }, becomeMemberButton, cancelButton)
   );
 };

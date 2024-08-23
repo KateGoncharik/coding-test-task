@@ -44,58 +44,6 @@
   flex-direction: column;
   justify-content: space-between;
   border: none;
-  gap: 5;
-}
-
-.sphere-select {
-  padding: 3%;
-  margin: 1%;
-}
-
-.global-input,
-.vk-input,
-.ok-input,
-.fb-input,
-.inst-input {
-  display: flex;
-  padding: 2%;
-  background-size: 18px;
-}
-
-.global-input {
-  background: url('./src/assets/icons/global.png') no-repeat center right 10px;
-}
-
-.vk-input {
-  background: url('./src/assets/icons/vk.png') no-repeat center right 10px;
-}
-
-.ok-input {
-  background: url('./src/assets/icons/ok.png') no-repeat center right 10px;
-}
-
-.fb-input {
-  background: url('./src/assets/icons/fb.png') no-repeat center right 10px;
-}
-
-.inst-input {
-  background: url('./src/assets/icons/inst.png') no-repeat center right 10px;
-}
-
-.input-icon {
-  width: 25px;
-  height: 25px;
-}
-
-.buttons-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.become-member-button {
-  background-color: #e5266e;
-  color: white;
-  padding: 2%;
 }
 
 .required-inputs-group {
@@ -106,12 +54,13 @@
 .required-inputs-group-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3%;
 }
 
 .required-input-wrapper {
@@ -124,7 +73,6 @@
   top: 1.1rem;
   left: 0.5rem;
   font-size: 0.75rem;
-  background-color: #fff;
   padding: 0 0.25rem;
 }
 
@@ -140,9 +88,8 @@
 
 .input-label {
   color: black;
+  padding-left: 2px;
 }
-
-/*******************/
 
 .upload-input-wrapper {
   position: relative;
@@ -176,7 +123,7 @@
   position: relative;
 }
 
-.loaded-photo-preview-wrapper img {
+.preview-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -188,8 +135,12 @@
   color: white;
   padding: 50%;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  text-decoration: underline;
   display: none;
+}
+
+.upload-icon {
+  width: 30%;
 }
 
 .clear-button {
@@ -206,4 +157,65 @@
 .custom-upload-input:hover .upload-input-text,
 .custom-upload-input:hover .clear-button {
   display: block;
+}
+
+.sphere-select {
+  padding: 3%;
+}
+
+.not-required-inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.global-input,
+.vk-input,
+.ok-input,
+.fb-input,
+.inst-input,
+.youtube-input {
+  display: flex;
+  padding: 2%;
+  background-size: 18px;
+  border: 1px solid #ccc;
+}
+
+.global-input {
+  background: url('./src/assets/icons/global.png') no-repeat center right 10px;
+}
+
+.vk-input {
+  background: url('./src/assets/icons/vk.png') no-repeat center right 10px;
+}
+
+.ok-input {
+  background: url('./src/assets/icons/ok.png') no-repeat center right 10px;
+}
+
+.fb-input {
+  background: url('./src/assets/icons/fb.png') no-repeat center right 10px;
+}
+
+.inst-input {
+  background: url('./src/assets/icons/inst.png') no-repeat center right 10px;
+}
+
+.youtube-input {
+  background: url('./src/assets/icons/youtube.png') no-repeat center right 10px;
+}
+
+.input-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.become-member-button {
+  background-color: #e5266e;
+  color: white;
+  padding: 2%;
 }
