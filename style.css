@@ -87,12 +87,6 @@
   height: 25px;
 }
 
-.form-header-inputs-wrapper {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
 .buttons-wrapper {
   display: flex;
   flex-direction: column;
@@ -104,15 +98,20 @@
   padding: 2%;
 }
 
-.required-inputs-left-group-wrapper {
+.required-inputs-group {
   display: flex;
   flex-direction: column;
 }
 
 .required-inputs-group-wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .required-input-wrapper {

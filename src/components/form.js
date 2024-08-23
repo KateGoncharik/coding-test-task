@@ -1,5 +1,5 @@
 import { Component } from '../component.js';
-import { createRequiredInputs, createInputs, createSelect } from './inputs.js';
+import { createRequiredInputs, createInputs } from './inputs.js';
 
 const createBecomeMemberForm = () => {
   const becomeMemberButton = new Component({
@@ -28,7 +28,6 @@ const createBecomeMemberForm = () => {
   return new Component(
     { tag: 'form', className: 'become-member-form' },
     createRequiredInputs(),
-    createSelect(),
     ...createInputs(),
     new Component({ className: 'buttons-wrapper' }, becomeMemberButton, cancelButton)
   );
