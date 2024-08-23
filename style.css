@@ -187,6 +187,7 @@
 .upload-input-text {
   position: absolute;
   color: white;
+  padding: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   display: none;
@@ -194,8 +195,8 @@
 
 .clear-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   background-color: white;
   border: none;
   border-radius: 50%;
