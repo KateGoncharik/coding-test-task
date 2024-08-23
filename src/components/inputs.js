@@ -1,27 +1,26 @@
 import { Component } from '../component.js';
 import { inputsData, requiredInputsData } from './data.js';
+import { createUploadInput } from './upload-photo-input.js';
 
 const createRequiredInputs = () => {
-  const requiredInputsWrapper = new Component(
-    { className: 'form-header-inputs-wrapper' },
+  const requiredInputWrapper = new Component(
+    { className: 'required-inputs-left-group-wrapper' },
     ...requiredInputsData.map((inputData) => {
-      const input = new Component({ tag: 'input', className: inputData.className });
+      const wrapper = new Component({ className: 'required-input-wrapper' });
+      const input = new Component({ tag: 'input', className: `${inputData.className} required-form-input` });
       input.setAttribute('name', inputData.name);
       input.setAttribute('required', true);
       input.setAttribute('placeholder', inputData.placeholder);
-      return input;
+      const label = new Component({ tag: 'label', className: 'form-group-label' });
+      label.append(new Component({ tag: 'span', className: 'red', text: '✱' }));
+      label.append(new Component({ tag: 'span', className: 'input-label', text: inputData.label }));
+      wrapper.appendChildren([label, input]);
+      return wrapper;
     })
   );
-  return requiredInputsWrapper;
-};
+  requiredInputWrapper.append(createUploadInput());
 
-const createUploadInput = () => {
-  const uploadPhotoInput = new Component({ tag: 'input' });
-  uploadPhotoInput.setAttribute('name', 'upload');
-  uploadPhotoInput.setAttribute('type', 'file');
-  const labelForUpload = new Component({ tag: 'label', text: 'Логотип (jpeg, png)' });
-  labelForUpload.setAttribute('for', 'upload');
-  return new Component({}, labelForUpload, uploadPhotoInput);
+  return new Component({ className: 'required-inputs-group-wrapper' }, requiredInputWrapper);
 };
 
 const createSelect = () => {
@@ -39,16 +38,11 @@ const createSelect = () => {
 
 const createInputs = () => {
   return inputsData.map((inputData) => {
-    const icon = new Component({ tag: 'img', className: 'input-icon' });
-    icon.setAttribute('src', inputData.label);
-    const input = new Component({ tag: 'input', className: 'form-input', icon });
+    const input = new Component({ tag: 'input', className: inputData.className });
     input.setAttribute('name', inputData.name);
     input.setAttribute('type', 'text');
-    input.setAttribute('placeholder', inputData.placeholder);
-    const result = new Component({});
-
-    result.append(input);
-    return result;
+    input.setAttribute('placeholder', '✱');
+    return input;
   });
 };
 

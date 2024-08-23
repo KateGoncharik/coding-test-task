@@ -47,14 +47,39 @@
   gap: 5;
 }
 
-.form-input,
 .sphere-select {
   padding: 3%;
   margin: 1%;
 }
 
-.form-input {
+.global-input,
+.vk-input,
+.ok-input,
+.fb-input,
+.inst-input {
   display: flex;
+  padding: 2%;
+  background-size: 18px;
+}
+
+.global-input {
+  background: url('./src/assets/icons/global.png') no-repeat center right 10px;
+}
+
+.vk-input {
+  background: url('./src/assets/icons/vk.png') no-repeat center right 10px;
+}
+
+.ok-input {
+  background: url('./src/assets/icons/ok.png') no-repeat center right 10px;
+}
+
+.fb-input {
+  background: url('./src/assets/icons/fb.png') no-repeat center right 10px;
+}
+
+.inst-input {
+  background: url('./src/assets/icons/inst.png') no-repeat center right 10px;
 }
 
 .input-icon {
@@ -68,8 +93,117 @@
   flex-direction: column;
 }
 
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .become-member-button {
   background-color: #e5266e;
   color: white;
   padding: 2%;
+}
+
+.required-inputs-left-group-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.required-inputs-group-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.required-input-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-group-label {
+  position: absolute;
+  top: 1.1rem;
+  left: 0.5rem;
+  font-size: 0.75rem;
+  background-color: #fff;
+  padding: 0 0.25rem;
+}
+
+.required-form-input {
+  padding: 1.1rem 0.9rem 0.25rem;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+.red {
+  color: red;
+}
+
+.input-label {
+  color: black;
+}
+
+/*******************/
+
+.upload-input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.upload-input {
+  display: none;
+}
+
+.custom-upload-input {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.loaded-photo-preview-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.loaded-photo-preview-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.upload-input-text {
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: none;
+}
+
+.clear-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+.custom-upload-input:hover .upload-input-text,
+.custom-upload-input:hover .clear-button {
+  display: block;
 }

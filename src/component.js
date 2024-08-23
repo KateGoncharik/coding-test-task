@@ -40,31 +40,7 @@ export class Component {
     this.#node.setAttribute(attribute, value);
   }
 
-  removeAttribute(attribute) {
-    this.#node.removeAttribute(attribute);
-  }
-
-  toggleClass(className) {
-    this.#node.classList.toggle(className);
-  }
-
   addListener(event, listener, options = false) {
     this.#node.addEventListener(event, listener, options);
-  }
-
-  removeListener(event, listener, options = false) {
-    this.#node.removeEventListener(event, listener, options);
-  }
-
-  destroyChildren() {
-    this.#children.forEach((child) => {
-      child.destroy();
-    });
-    this.#children.length = 0;
-  }
-
-  destroy() {
-    this.destroyChildren();
-    this.#node.remove();
   }
 }
