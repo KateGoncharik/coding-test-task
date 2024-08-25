@@ -8,12 +8,12 @@ const createRequiredInputs = () => {
     { className: 'required-inputs-group' },
     ...requiredInputsData.map((inputData) => {
       const wrapper = new Component({ className: 'required-input-wrapper' });
-      const input = new Component({ tag: 'input', className: `${inputData.className} required-form-input` });
+      const input = new Component({ tag: 'input', className: `${inputData.className}` });
       input.setAttribute('name', inputData.name);
       input.setAttribute('required', true);
       input.setAttribute('placeholder', inputData.placeholder);
       const label = new Component(
-        { tag: 'label', className: 'form-group-label' },
+        { tag: 'label', className: 'required-input-label' },
         new Component({ tag: 'span', className: 'red', text: '✱' }),
         new Component({ tag: 'span', className: 'input-label', text: inputData.label })
       );

@@ -13,9 +13,21 @@ const inputsData = [
 ];
 
 const requiredInputsData = [
-  { name: 'org-name', placeholder: 'АВЦ', className: 'form-input', type: 'text', label: 'Название органицзации' },
-  { name: 'telephone', placeholder: '+7 933 848-34-33', className: 'form-input', type: 'tel', label: 'Телефон' },
-  { name: 'email', placeholder: 'avc@gmail.com', className: 'form-input', type: 'email', label: 'E-mail' },
+  {
+    name: 'org-name',
+    placeholder: 'АВЦ',
+    className: 'required-form-input',
+    type: 'text',
+    label: 'Название органицзации',
+  },
+  {
+    name: 'telephone',
+    placeholder: '+7 933 848-34-33',
+    className: 'required-form-input',
+    type: 'tel',
+    label: 'Телефон',
+  },
+  { name: 'email', placeholder: 'avc@gmail.com', className: 'required-form-input', type: 'email', label: 'E-mail' },
 ];
 
 export { inputsData, requiredInputsData };
