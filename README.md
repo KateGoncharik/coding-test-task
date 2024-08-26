@@ -71,12 +71,14 @@ Check out deployment - [at netlify](https://coding-test-task-form.netlify.app/)
 1. Clone the repo
 
    sh
-   git clone <>
+   git clone <https://github.com/KateGoncharik/coding-test-task.git>
 
 2. Install NPM packages
 
    sh
    npm install
+
+3. Start VSCode local server or check the deployment [here](https://coding-test-task-form.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
