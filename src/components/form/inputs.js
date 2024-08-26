@@ -1,6 +1,6 @@
 import { Component } from '../../component.js';
 import { inputsData, requiredInputsData } from './data.js';
-import { createSelect } from './select.js';
+import { createSelect } from './sphere-select.js';
 import { createUploadInput } from './upload-photo-input.js';
 
 const createRequiredInputs = () => {
