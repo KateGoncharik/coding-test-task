@@ -7,7 +7,7 @@ export const createPage = () => {
     {
       className: 'app',
     },
-    new Component({ className: 'wrapper' }, writeButton),
+    new Component({ className: 'wrapper', text: 'Completed by Kate Goncharik' }, writeButton),
     createModalWindow()
   );
 };

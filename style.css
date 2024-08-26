@@ -20,11 +20,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 .write-button {
-  padding: 10%;
+  padding: 5%;
+  max-width: 200px;
   border: 1px solid var(--pink);
   background-color: var(--white);
   color: var(--pink);
