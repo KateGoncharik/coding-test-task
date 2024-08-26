@@ -1,4 +1,4 @@
-import { Component } from '../component.js';
+import { Component } from '../../component.js';
 
 export const createSelect = () => {
   const economyOption = new Component({ tag: 'option', text: 'Экономика' });

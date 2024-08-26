@@ -1,5 +1,5 @@
-import { Component } from '../component.js';
-import { createRequiredInputs, createInputs } from './inputs.js';
+import { Component } from '../../component.js';
+import { createInputs, createRequiredInputs } from './inputs.js';
 
 const createBecomeMemberForm = () => {
   const becomeMemberButton = new Component({

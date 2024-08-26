@@ -1,5 +1,5 @@
-import { Component } from '../component.js';
-import { createBecomeMemberForm } from './form.js';
+import { Component } from '../../component.js';
+import { createBecomeMemberForm } from '../form/form.js';
 
 const createModalWindow = () => {
   const authFormTitle = new Component({

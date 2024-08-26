@@ -1,4 +1,4 @@
-import { Component } from '../component.js';
+import { Component } from '../../component.js';
 import { inputsData, requiredInputsData } from './data.js';
 import { createSelect } from './select.js';
 import { createUploadInput } from './upload-photo-input.js';

@@ -1,4 +1,4 @@
-import { Component } from '../component.js';
+import { Component } from '../../component.js';
 
 export const createUploadInput = () => {
   const label = new Component(

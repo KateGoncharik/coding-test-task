@@ -18,7 +18,7 @@ const requiredInputsData = [
     placeholder: 'АВЦ',
     className: 'required-form-input',
     type: 'text',
-    label: 'Название органицзации',
+    label: 'Название организации',
   },
   {
     name: 'telephone',
