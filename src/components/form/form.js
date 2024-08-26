@@ -1,5 +1,6 @@
 import { Component } from '../../component.js';
 import { createInputs, createRequiredInputs } from './inputs.js';
+import { validateForm } from './validation.js';
 
 const createBecomeMemberForm = () => {
   const becomeMemberButton = new Component({
@@ -10,6 +11,21 @@ const createBecomeMemberForm = () => {
 
   becomeMemberButton.addListener('click', (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+      console.error('Invalid data');
+      const hints = document.querySelectorAll('.hint');
+      hints.forEach((hint) => {
+        hint.classList.remove('hide');
+        hint.classList.add('show');
+      });
+      return;
+    }
+    const hints = document.querySelectorAll('.hint');
+    hints.forEach((hint) => {
+      hint.classList.remove('show');
+      hint.classList.add('hide');
+    });
+    console.log('Successfully submitted!');
   });
 
   const cancelButton = new Component({

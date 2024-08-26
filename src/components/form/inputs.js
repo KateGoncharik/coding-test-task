@@ -11,6 +11,8 @@ const createRequiredInputs = () => {
       const input = new Component({ tag: 'input', className: `${inputData.className}` });
       input.setAttribute('name', inputData.name);
       input.setAttribute('required', true);
+      input.setAttribute('type', inputData.type);
+
       input.setAttribute('placeholder', inputData.placeholder);
       const label = new Component(
         { tag: 'label', className: 'required-input-label' },
@@ -18,7 +20,9 @@ const createRequiredInputs = () => {
         new Component({ tag: 'span', className: 'input-label', text: inputData.label })
       );
 
-      wrapper.appendChildren([label, input]);
+      const hint = new Component({ className: 'hint hide', text: inputData.hint });
+
+      wrapper.appendChildren([label, input, hint]);
       return wrapper;
     })
   );
@@ -38,7 +42,9 @@ const createInputs = () => {
       input.setAttribute('name', inputData.name);
       input.setAttribute('type', 'text');
       input.setAttribute('placeholder', inputData.placeholder);
-      return input;
+      const hint = new Component({ className: 'hint hide', text: inputData.hint });
+
+      return new Component({ className: 'not-required-input-wrapper' }, input, hint);
     })
   );
 };

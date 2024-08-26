@@ -53,17 +53,31 @@ export const createUploadInput = () => {
   customUploadInput.append(loadedPhotoPreviewWrapper);
   customUploadInput.append(clearButton);
 
-  return new Component({ className: 'upload-input-wrapper' }, label, input, customUploadInput);
+  const hint = new Component({ className: 'img-hint hide', text: 'Format must be jpg, jpeg or png' });
+
+  return new Component({ className: 'upload-input-wrapper' }, label, input, customUploadInput, hint);
 };
 
 function handleUploadInputChange(event) {
   const preview = document.querySelector('.preview-image');
+  const hint = document.querySelector('.img-hint'); ///
+
   const indexOfSelectedFile = 0;
   const file = event.target.files[indexOfSelectedFile];
 
   if (!file) {
     return;
   }
+
+  const allowedFormats = ['image/jpeg', 'image/png'];
+  if (!allowedFormats.includes(file.type)) {
+    hint.classList.remove('hide');
+    preview.src = './src/assets/img/placeholder-image.png';
+    return;
+  }
+
+  hint.classList.add('hide');
+
   const reader = new FileReader();
   reader.onload = function (e) {
     preview.src = e.target.result;
