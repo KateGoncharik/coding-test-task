@@ -1,7 +1,7 @@
 import { Component } from '../../component.js';
 import { inputsData, requiredInputsData } from './data.js';
 import { createSelect } from './sphere-select.js';
-import { createUploadInput } from './upload-photo-input.js';
+import { createUploadInput } from './upload-input.js';
 
 const createRequiredInputs = () => {
   const requiredInputsLeftGroupWrapper = new Component(
