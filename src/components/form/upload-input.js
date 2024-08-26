@@ -58,8 +58,8 @@ export const createUploadInput = () => {
 
 function handleUploadInputChange(event) {
   const preview = document.querySelector('.preview-image');
-
-  const file = event.target.files[0];
+  const indexOfSelectedFile = 0;
+  const file = event.target.files[indexOfSelectedFile];
 
   if (!file) {
     return;
