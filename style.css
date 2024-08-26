@@ -341,4 +341,7 @@
     margin-top: 0.5rem;
     font-size: 10px;
   }
+  .hint {
+    font-size: 9px;
+  }
 }
