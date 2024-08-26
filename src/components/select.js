@@ -10,6 +10,7 @@ export const createSelect = () => {
 
   const sphereSelect = new Component({ tag: 'select', className: 'required-form-input' }, economyOption, ecologyOption);
   sphereSelect.setAttribute('name', 'sphere');
+  sphereSelect.setAttribute('required', true);
 
   const label = new Component(
     { tag: 'label', className: 'required-input-label' },

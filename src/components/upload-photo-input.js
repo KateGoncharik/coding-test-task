@@ -11,6 +11,7 @@ export const createUploadInput = () => {
   const input = new Component({ tag: 'input', className: 'upload-input' });
   input.setAttribute('name', 'upload');
   input.setAttribute('type', 'file');
+  input.setAttribute('required', true);
   input.setAttribute('accept', '.jpg, .jpeg, .png');
   input.addListener('change', handleUploadInputChange);
 

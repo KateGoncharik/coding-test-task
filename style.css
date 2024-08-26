@@ -1,6 +1,8 @@
 :root {
   --pink: #e5266e;
   --white: #ffffff;
+  --cancel: #0848c0;
+  --black: var(--black);
 }
 
 .app {
@@ -78,11 +80,15 @@
 }
 
 .required-form-input {
-  padding: 1.1rem 0.25rem 0.25rem 0.5rem;
+  padding: 1.3rem 0 1rem 0.5rem;
   border: 1px solid #ccc;
   margin-top: 1rem;
   width: 100%;
   box-sizing: border-box;
+}
+
+.required-form-input::placeholder {
+  color: black;
 }
 
 .red {
@@ -234,6 +240,30 @@
   color: white;
   padding: 2%;
   margin-bottom: 0.5rem;
+  transition: 1s;
+}
+
+.become-member-button:hover {
+  cursor: pointer;
+  color: var(--pink);
+  background-color: var(--white);
+  border: 1px solid var(--pink);
+  transition: 1s;
+}
+
+.cancel-button {
+  padding: 2%;
+  background-color: var(--white);
+  border: none;
+  color: var(--cancel);
+  transition: 1s;
+}
+
+.cancel-button:hover {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--cancel);
+  transition: 1s;
 }
 
 .sphere-select {
@@ -241,6 +271,9 @@
 }
 
 @media (max-width: 900px) {
+  .dialog {
+    width: 70%;
+  }
   .required-inputs-group {
     width: 100%;
   }
@@ -258,13 +291,27 @@
     flex-direction: column;
     align-items: center;
   }
+  .required-form-input {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 400px) {
+  .dialog {
+    width: 85%;
+    padding: 3%;
+  }
   .become-member-form-title {
     font-size: 1rem;
   }
   .input-label {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+  }
+  .required-input-label {
+    top: 0.7rem;
+  }
+  .required-form-input {
+    margin-top: 0.5rem;
+    font-size: 12px;
   }
 }
