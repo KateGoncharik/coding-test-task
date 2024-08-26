@@ -44,6 +44,11 @@ Check out deployment - [at netlify](https://coding-test-task-form.netlify.app/)
 
  <img src='./src/assets/img/layout-from-figma.png' alt='layout from figma'>
 
+#### Notes
+
+As in the task it was not mentioned - I made validation on submit-button click, appearing of "Выберите файл" text with 'X' button on _hover_
+and placeholder color _black_.
+
 ### Technology stack
 
 [![NPM][NPM]][NPM-url]
