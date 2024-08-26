@@ -41,8 +41,9 @@
 
 .dialog {
   width: 50%;
-  padding: 5%;
+  padding: 1% 5%;
   border: none;
+  border-radius: 10px;
 }
 
 .become-member-form {
