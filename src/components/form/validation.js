@@ -3,6 +3,7 @@ export const validateForm = () => {
   const orgNameInputValue = document.getElementsByName('org-name')[indexOfFoundInput].value;
   const telephoneInputValue = document.getElementsByName('telephone')[indexOfFoundInput].value;
   const emailInputValue = document.getElementsByName('email')[indexOfFoundInput].value;
+  const uploadInputValue = document.getElementsByName('upload')[indexOfFoundInput].value;
   const vkInputValue = document.getElementsByName('vk')[indexOfFoundInput].value;
   const okInputValue = document.getElementsByName('ok')[indexOfFoundInput].value;
   const instInputValue = document.getElementsByName('inst')[indexOfFoundInput].value;
@@ -17,10 +18,12 @@ export const validateForm = () => {
     fb: /^facebook\.com\/[a-zA-Z0-9_.-]+$/,
     inst: /^instagram\.com\/[a-zA-Z0-9_.-]+$/,
     youtube: /^youtube\.com\/[a-zA-Z0-9_.-]+$/,
+    upload: /^.+$/,
   };
   const isEmailValid = schemasFormValidation.email.test(emailInputValue);
   const isTelephoneValid = schemasFormValidation.tel.test(telephoneInputValue);
   const isOrgNameValid = schemasFormValidation.orgName.test(orgNameInputValue);
+  const isUploadValid = schemasFormValidation.upload.test(uploadInputValue);
   const isVkLinkValid = schemasFormValidation.vk.test(vkInputValue);
   const isOkLinkValid = schemasFormValidation.ok.test(okInputValue);
   const isInstLinkValid = schemasFormValidation.inst.test(instInputValue);
@@ -30,6 +33,7 @@ export const validateForm = () => {
     isOrgNameValid,
     isEmailValid,
     isTelephoneValid,
+    isUploadValid,
     isVkLinkValid,
     isOkLinkValid,
     isInstLinkValid,

@@ -53,7 +53,7 @@ export const createUploadInput = () => {
   customUploadInput.append(loadedPhotoPreviewWrapper);
   customUploadInput.append(clearButton);
 
-  const hint = new Component({ className: 'img-hint hide', text: 'Format must be jpg, jpeg or png' });
+  const hint = new Component({ className: 'img-hint hint hide', text: 'Format must be jpg, jpeg or png' });
 
   return new Component({ className: 'upload-input-wrapper' }, label, input, customUploadInput, hint);
 };
