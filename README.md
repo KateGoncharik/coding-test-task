@@ -1,10 +1,10 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <a href=''>
-
+  <a href='https://coding-test-task-form.netlify.app/'>
+  <img src='./src/assets/img/result-desc.png' alt='result-desktop'>
+    <img src='./src/assets/img/result-mobile.png' alt='result-mobile'>
     <h1 align="center">Coding test task</h1>
-
   </a>
 </div>
 
@@ -36,9 +36,13 @@
 
 _Completed: August 2024_
 
-Check out deployment - [at netlify](h)
+Check out deployment - [at netlify](https://coding-test-task-form.netlify.app/)
 
-#### [Link to task from author](h)
+#### Task
+
+Сверстать модальное окно, без использования сторонних библиотек. Внутри модального окна реализовать форму. Форма не должна быть доступна к отправке, если поля не заполнены, либо форма не валидна. Реализовать мобильную адаптацию. Реализовать возможность открыть/закрыть модальное окно на странице. Как плюс использование БЭМ-методологии. Дизайн формы в figma
+
+ <img src='./src/assets/img/layout-from-figma.png' alt='layout from figma'>
 
 ### Technology stack
 
