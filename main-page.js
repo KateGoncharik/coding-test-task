@@ -1,10 +1,10 @@
 import { Component } from './component.js';
 import { getPosts } from './src/components/store.js';
-import { generateTable } from './src/components/table/table.js';
+import { createTable } from './src/components/table/table.js';
 
-export const createPage = () => {
+export const createMainPage = () => {
   getPosts().then((data) => {
-    generateTable(data);
+    createTable(data);
   });
 
   return new Component(

@@ -1,10 +1,31 @@
 :root {
-  --black: var(--black);
+  --black: black;
 }
 
 table,
 th,
 td {
-  border: 1px solid black;
+  border: 1px solid var(--black);
   border-collapse: collapse;
+}
+
+table {
+  margin: 5px;
+}
+
+thead th {
+  text-transform: capitalize;
+  padding: 5px;
+}
+
+thead th:hover {
+  cursor: pointer;
+}
+
+td {
+  padding: 2px 5px;
+}
+
+.wrapper {
+  padding: 2%;
 }

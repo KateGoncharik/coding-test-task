@@ -1,3 +1,3 @@
-import { createPage } from './main-page.js';
+import { createMainPage } from './main-page.js';
 
-document.body.append(createPage().getNode());
+document.body.append(createMainPage().getNode());

@@ -1,6 +1,6 @@
 import { Component } from '../../../component.js';
 
-export function generateTable(posts) {
+export const createTable = (posts) => {
   const wrapper = document.querySelector('.wrapper');
   const table = new Component({ tag: 'table' });
   const tableHead = new Component({ tag: 'thead' });
@@ -57,4 +57,4 @@ export function generateTable(posts) {
 
   table.append(tableBody);
   wrapper.appendChild(table.getNode());
-}
+};
