@@ -12,8 +12,7 @@ export const createSearch = () => {
     }
     searchInTable(input.value);
   });
-  const searchWrapper = new Component({ className: 'search-wrapper' }, searchInput, searchButton);
-  return searchWrapper;
+  return new Component({ className: 'search-wrapper' }, searchInput, searchButton);
 };
 
 const searchInTable = (searchKey) => {
