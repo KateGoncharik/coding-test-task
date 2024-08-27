@@ -18,7 +18,8 @@ thead th {
   padding: 5px;
 }
 
-thead th:hover {
+thead th:hover,
+.search-button:hover {
   cursor: pointer;
 }
 
@@ -27,5 +28,9 @@ td {
 }
 
 .wrapper {
+  padding: 2%;
+}
+
+.search-button {
   padding: 2%;
 }
