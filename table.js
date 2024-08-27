@@ -44,13 +44,8 @@ export function generateTable(posts) {
 
   function sortTable(key) {
     const sortedPosts = posts.slice().sort((a, b) => {
-      if (a[key] < b[key]) {
-        return sortDirection === 'asc' ? -1 : 1;
-      }
-      if (a[key] > b[key]) {
-        return sortDirection === 'asc' ? 1 : -1;
-      }
-      return 0;
+      const order = sortDirection === 'asc' ? 1 : -1;
+      return a[key] > b[key] ? order : -order;
     });
 
     sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
