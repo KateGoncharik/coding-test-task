@@ -31,6 +31,7 @@ td {
   padding: 2%;
 }
 
-.search-button {
-  padding: 2%;
+input, .search-button {
+  margin: 5px;
+  padding: 1%;
 }

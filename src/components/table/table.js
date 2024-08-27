@@ -14,9 +14,20 @@ export const createTable = (posts) => {
 
   let sortDirection = 'asc';
 
+  const sortTable = (posts, sortingKey) => {
+    const sortedPosts = [...posts].sort((a, b) => {
+      const order = sortDirection === 'asc' ? 1 : -1;
+      return a[sortingKey] > b[sortingKey] ? order : -order;
+    });
+
+    sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+
+    renderTableData(sortedPosts);
+  };
+
   headers.forEach((header) => {
     const th = new Component({ tag: 'th', text: header });
-    th.addListener('click', () => sortTable(posts, sortDirection, header));
+    th.addListener('click', () => sortTable(posts, header));
     headerRow.append(th);
   });
 
@@ -29,17 +40,6 @@ export const createTable = (posts) => {
   wrapper.append(createSearch().getNode());
   wrapper.appendChild(table.getNode());
   renderTableData(posts);
-};
-
-const sortTable = (posts, sortDirection, sortingKey) => {
-  const sortedPosts = [...posts].sort((a, b) => {
-    const order = sortDirection === 'asc' ? 1 : -1;
-    return a[sortingKey] > b[sortingKey] ? order : -order;
-  });
-
-  sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-
-  renderTableData(sortedPosts);
 };
 
 export const renderTableData = (sortedPosts) => {
