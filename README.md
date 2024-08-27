@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href=''>
-
+  <img src='./src/assets/img/result.png'>
     <h1 align="center">Coding test task</h1>
 
   </a>
@@ -32,13 +32,17 @@
 
 ## About The Project
 
+Table with sample data. Features: sorting, search.
+
 ### _Coding test task_
 
 _Completed: August 2024_
 
-Check out deployment - [at netlify](h)
+Check out deployment - [at netlify](https://practice-3-table-sorting-search.netlify.app/)
 
-#### [Link to task from author](h)
+#### Task
+
+Реализовать таблицу на основе полученных данных с <https://jsonplaceholder.typicode.com/posts> без использования сторонних библиотек. Добавить возможность сортировки по столбцам (при нажатии на название столбца строки таблицы сортируются по возрастанию, при повторном клике - по убыванию). Над таблицей вывести поисковую строку. При вводе данных (не менее 3-х символов) в поисковую строку производить фильтрацию таблицы (строки таблицы, данные которых не содержат подстроку, введённую пользователем, скрываются).
 
 ### Technology stack
 
@@ -67,12 +71,14 @@ Check out deployment - [at netlify](h)
 1. Clone the repo
 
    sh
-   git clone <>
+   git clone <https://github.com/KateGoncharik/coding-test-task.git>
 
 2. Install NPM packages
 
    sh
    npm install
+
+3. Start VSCode local server or check the deployment [here](https://practice-3-table-sorting-search.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
