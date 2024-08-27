@@ -15,7 +15,7 @@ export const createTable = (posts) => {
 
   headers.forEach((header) => {
     const th = new Component({ tag: 'th', text: header });
-    th.getNode().addEventListener('click', () => sortTable(header));
+    th.addListener('click', () => sortTable(header));
     headerRow.append(th);
   });
 
@@ -42,16 +42,16 @@ export const createTable = (posts) => {
     });
   }
 
-  function sortTable(key) {
+  const sortTable = (sortingKey) => {
     const sortedPosts = posts.slice().sort((a, b) => {
       const order = sortDirection === 'asc' ? 1 : -1;
-      return a[key] > b[key] ? order : -order;
+      return a[sortingKey] > b[sortingKey] ? order : -order;
     });
 
     sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
 
     renderTableData(sortedPosts);
-  }
+  };
 
   renderTableData(posts);
 

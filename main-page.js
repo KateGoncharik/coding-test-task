@@ -1,5 +1,5 @@
 import { Component } from './component.js';
-import { getPosts } from './src/components/store.js';
+import { getPosts } from './src/components/table/get-posts.js';
 import { createTable } from './src/components/table/table.js';
 
 export const createMainPage = () => {
