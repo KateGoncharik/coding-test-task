@@ -1,6 +1,6 @@
 import { Component } from './component.js';
 import { getPosts } from './src/components/store.js';
-import { generateTable } from './table.js';
+import { generateTable } from './src/components/table/table.js';
 
 export const createPage = () => {
   getPosts().then((data) => {
