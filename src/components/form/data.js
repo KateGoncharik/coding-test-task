@@ -41,6 +41,13 @@ const inputsData = [
     className: 'youtube-input',
     hint: 'Must be filled and look like that: youtube.com/shans',
   },
+  {
+    name: 'leader-name',
+    placeholder: 'Александров Иван Васильевич',
+    label: 'Руководитель',
+    className: 'leader-name-input',
+    hint: 'Must contain 1-20 chars',
+  },
 ];
 
 const requiredInputsData = [

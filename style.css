@@ -46,6 +46,10 @@
   border-radius: 10px;
 }
 
+.dialog::-webkit-scrollbar {
+  width: 0;
+}
+
 .become-member-form {
   display: flex;
   flex-direction: column;
@@ -77,6 +81,7 @@
   transition: 1s;
   opacity: 1;
 }
+
 .required-inputs-group-wrapper {
   display: flex;
   justify-content: space-between;
@@ -207,7 +212,7 @@
 .ok-input,
 .fb-input,
 .inst-input,
-.youtube-input {
+.youtube-input, .leader-name-input {
   display: flex;
   padding: 3% 0.5rem;
   margin: 2% 0;
