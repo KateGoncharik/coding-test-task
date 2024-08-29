@@ -42,3 +42,49 @@ export const validateForm = () => {
 
   return results.every((value) => value === true);
 };
+
+export const validatePhoneNumber = () => {
+  document.getElementsByName('telephone')[0].addEventListener('input', function (e) {
+    let input = e.target;
+    let value = input.value.replace(/\D/g, '');
+    let formattedValue = '+7 ';
+
+    if (value.length > 1) {
+      formattedValue += value.substring(1, 4);
+    }
+    if (value.length >= 5) {
+      formattedValue += ' ' + value.substring(4, 7);
+    }
+    if (value.length >= 8) {
+      formattedValue += '-' + value.substring(7, 9);
+    }
+    if (value.length >= 10) {
+      formattedValue += '-' + value.substring(9, 11);
+    }
+
+    input.value = formattedValue;
+  });
+
+  document.getElementsByName('telephone')[0].addEventListener('keydown', function (e) {
+    let input = e.target;
+
+    let allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
+    if (!/^\d$/.test(e.key) && !allowedKeys.includes(e.key)) {
+      e.preventDefault();
+    }
+
+
+    if (input.selectionStart === 0 && e.key === 'Backspace') {
+      e.preventDefault();
+    }
+  });
+
+  document.getElementsByName('telephone')[0].addEventListener('click', function (e) {
+    let input = e.target;
+
+
+    if (input.selectionStart < 3) {
+      input.setSelectionRange(3, 3);
+    }
+  });
+};
