@@ -40,13 +40,14 @@ const createBecomeMemberForm = () => {
   };
 
   cancelButton.addListener('click', closeModal);
-
-  return new Component(
+  const form = new Component(
     { tag: 'form', className: 'become-member-form' },
     createRequiredInputs(),
     createInputs(),
     new Component({ className: 'buttons-wrapper' }, becomeMemberButton, cancelButton)
   );
+  form.setAttribute('method', 'dialog');
+  return form;
 };
 
 export { createBecomeMemberForm };

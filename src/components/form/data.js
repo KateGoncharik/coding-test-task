@@ -43,7 +43,7 @@ const inputsData = [
   },
 ];
 
-const notRequiredInputWithLabelData = {
+const leaderNameInputData = {
   name: 'leader-name',
   placeholder: 'Александров Иван Васильевич',
   label: 'Руководитель',
@@ -55,7 +55,7 @@ const requiredInputsData = [
   {
     name: 'org-name',
     placeholder: 'АВЦ',
-    className: 'required-form-input',
+    className: 'required-input',
     type: 'text',
     label: 'Название организации',
     hint: 'Must contain 1-20 chars',
@@ -63,7 +63,7 @@ const requiredInputsData = [
   {
     name: 'telephone',
     placeholder: '+7 933 848-34-33',
-    className: 'required-form-input',
+    className: 'required-input',
     type: 'tel',
     label: 'Телефон',
     hint: 'Must look like that: +7 933 848-34-33',
@@ -71,11 +71,11 @@ const requiredInputsData = [
   {
     name: 'email',
     placeholder: 'avc@gmail.com',
-    className: 'required-form-input',
+    className: 'required-input',
     type: 'email',
     label: 'E-mail',
     hint: 'Must be valid email',
   },
 ];
 
-export { inputsData, requiredInputsData, notRequiredInputWithLabelData };
+export { inputsData, requiredInputsData, leaderNameInputData };

@@ -9,12 +9,12 @@ export const createSelect = () => {
   ecologyOption.setAttribute('selected', true);
   ecologyOption.setAttribute('value', 'Экология');
 
-  const sphereSelect = new Component({ tag: 'select', className: 'required-form-input' }, economyOption, ecologyOption);
+  const sphereSelect = new Component({ tag: 'select', className: 'required-input' }, economyOption, ecologyOption);
   sphereSelect.setAttribute('name', 'sphere');
   sphereSelect.setAttribute('required', true);
 
-  const label = createLabel(true, 'Направление')
- 
+  const label = createLabel(true, 'Направление');
+
   label.setAttribute('for', 'sphere');
 
   return new Component({ className: 'required-input-wrapper' }, label, sphereSelect);

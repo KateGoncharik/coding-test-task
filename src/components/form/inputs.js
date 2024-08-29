@@ -1,5 +1,5 @@
 import { Component } from '../../component.js';
-import { inputsData, notRequiredInputWithLabelData, requiredInputsData } from './data.js';
+import { inputsData, leaderNameInputData, requiredInputsData } from './data.js';
 import { createSelect } from './sphere-select.js';
 import { createUploadInput } from './upload-input.js';
 
@@ -24,7 +24,7 @@ const createRequiredInputs = () => {
   );
 
   return new Component(
-    { className: 'form-container' },
+    { className: 'form-header-container' },
     new Component({ className: 'required-inputs-group-wrapper' }, requiredInputsLeftGroupWrapper, createUploadInput()),
     createSelect()
   );
@@ -34,15 +34,15 @@ const createLeaderNameInput = () => {
   const wrapper = new Component({ className: 'required-input-wrapper' });
   const input = new Component({
     tag: 'input',
-    className: `${notRequiredInputWithLabelData.className} required-form-input`,
+    className: `${leaderNameInputData.className} required-input`,
   });
-  input.setAttribute('name', notRequiredInputWithLabelData.name);
-  input.setAttribute('type', notRequiredInputWithLabelData.type);
+  input.setAttribute('name', leaderNameInputData.name);
+  input.setAttribute('type', leaderNameInputData.type);
 
-  input.setAttribute('placeholder', notRequiredInputWithLabelData.placeholder);
-  const label = createLabel(false, notRequiredInputWithLabelData.label);
+  input.setAttribute('placeholder', leaderNameInputData.placeholder);
+  const label = createLabel(false, leaderNameInputData.label);
 
-  const hint = new Component({ className: 'hint hide', text: notRequiredInputWithLabelData.hint });
+  const hint = new Component({ className: 'hint hide', text: leaderNameInputData.hint });
 
   wrapper.appendChildren([label, input, hint]);
   return wrapper;
@@ -52,7 +52,7 @@ const createInputs = () => {
   return new Component(
     { className: 'not-required-inputs-wrapper' },
     ...inputsData.map((inputData) => {
-      const input = new Component({ tag: 'input', className: inputData.className });
+      const input = new Component({ tag: 'input', className: `${inputData.className} not-required-input` });
       input.setAttribute('name', inputData.name);
       input.setAttribute('type', 'text');
       input.setAttribute('placeholder', inputData.placeholder);

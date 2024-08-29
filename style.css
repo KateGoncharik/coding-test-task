@@ -2,7 +2,7 @@
   --pink: #e5266e;
   --white: #ffffff;
   --cancel: #0848c0;
-  --black: var(--black);
+  --black: black;
   --dark-grey: rgba(0, 0, 0, 0.5);
   --grey: #ccc;
   --red: red;
@@ -40,24 +40,39 @@
 }
 
 .dialog {
-  width: 50%;
-  padding: 1% 5%;
+  width: 58%;
+  padding: 3% 0;
+  margin: 7% auto;
   border: none;
   border-radius: 10px;
 }
 
+.dialog::backdrop {
+  background-color: var(--dark-grey);
+}
+
 .dialog::-webkit-scrollbar {
   width: 0;
+} 
+
+.modal-container {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .become-member-form {
+  width: 100%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: none;
 }
 
-.form-container {
+.form-header-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 3%;
@@ -91,7 +106,7 @@
 .required-inputs-group {
   display: flex;
   flex-direction: column;
-  width: 55%;
+  width: 65%;
 }
 
 .required-input-wrapper {
@@ -106,14 +121,19 @@
   font-size: 0.75rem;
 }
 
-.required-form-input {
+.required-input {
   padding: 1.3rem 0 1rem 0.5rem;
-  border: 1px solid var(--grey);
-  margin-top: 1rem;
   width: 100%;
+  font-size: 16px;
   box-sizing: border-box;
 }
 
+.required-input,.not-required-input {
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  margin-top: 1rem;
+
+}
 
 .red {
   color: var(--red);
@@ -130,7 +150,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
+  width: 30%;
 }
 
 .upload-input {
@@ -206,28 +226,16 @@
   flex-direction: column;
 }
 
-.global-input,
-.vk-input,
-.ok-input,
-.fb-input,
-.inst-input,
-.youtube-input {
+.not-required-input {
   display: flex;
-  padding: 2% 0.5rem;
-  margin: 2% 0;
+  padding: 5% 0.5rem;
+  font-size: 14px;
   background-size: 18px;
-  border: 1px solid var(--grey);
-  border-radius: 4px;
+ 
 }
 
-.required-form-input::placeholder,
-.global-input::placeholder,
-.vk-input::placeholder,
-.ok-input::placeholder,
-.fb-input::placeholder,
-.inst-input::placeholder,
-.youtube-input::placeholder,
-.leader-name-input::placeholder {
+
+.not-required-input::placeholder {
   color: var(--black);
 }
 
@@ -301,6 +309,12 @@
 
 .sphere-select {
   width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .dialog {
+    margin: 1% auto;
+  }
 }
 
 @media (max-width: 900px) {
