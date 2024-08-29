@@ -211,9 +211,9 @@
 .ok-input,
 .fb-input,
 .inst-input,
-.youtube-input, .leader-name-input {
+.youtube-input {
   display: flex;
-  padding: 3% 0.5rem;
+  padding: 2% 0.5rem;
   margin: 2% 0;
   background-size: 18px;
   border: 1px solid var(--grey);

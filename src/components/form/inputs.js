@@ -31,7 +31,7 @@ const createRequiredInputs = () => {
 };
 
 const createLeaderNameInput = () => {
-  const wrapper = new Component({ className: 'not-required-input-wrapper' });
+  const wrapper = new Component({ className: 'required-input-wrapper' });
   const input = new Component({
     tag: 'input',
     className: `${notRequiredInputWithLabelData.className} required-form-input`,
