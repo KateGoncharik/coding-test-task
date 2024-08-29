@@ -61,6 +61,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+    overflow-y: auto;
+
+}
+
+
+.modal-container::-webkit-scrollbar {
+  width: 8px; /* Устанавливаем видимый скроллбар */
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Цвет скроллбара */
+  border-radius: 10px;
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Цвет скроллбара при наведении */
 }
 
 .become-member-form {
@@ -233,7 +249,7 @@
  
 }
 
-
+.required-input::placeholder,
 .not-required-input::placeholder {
   color: var(--black);
 }
@@ -332,7 +348,7 @@
   .input-label {
     left: 0.3rem;
   }
-  .required-form-input {
+  .required-input {
     padding: 1.1rem 0 0.25rem 0.3rem;
   }
   .upload-input-wrapper {
@@ -346,7 +362,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .required-form-input {
+  .required-input {
     font-size: 14px;
   }
 }
@@ -372,8 +388,11 @@
   .input-label {
     top: 0.5rem;
   }
-  .required-form-input {
+  .required-input {
     margin-top: 0.5rem;
+    font-size: 10px;
+  }
+  .not-required-input {
     font-size: 10px;
   }
   .hint {
