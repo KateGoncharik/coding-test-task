@@ -8,6 +8,7 @@ export const validateForm = () => {
   const okInputValue = document.getElementsByName('ok')[indexOfFoundInput].value;
   const instInputValue = document.getElementsByName('inst')[indexOfFoundInput].value;
   const youtubeInputValue = document.getElementsByName('youtube')[indexOfFoundInput].value;
+  const leaderNameInputValue = document.getElementsByName('leader-name')[indexOfFoundInput].value;
 
   const schemasFormValidation = {
     tel: /^\+7\s\d{3}\s\d{3}-\d{2}-\d{2}$/,
@@ -19,6 +20,7 @@ export const validateForm = () => {
     inst: /^instagram\.com\/[a-zA-Z0-9_.-]+$/,
     youtube: /^youtube\.com\/[a-zA-Z0-9_.-]+$/,
     upload: /^.+$/,
+    leader: /^.{1,40}$/,
   };
   const isEmailValid = schemasFormValidation.email.test(emailInputValue);
   const isTelephoneValid = schemasFormValidation.tel.test(telephoneInputValue);
@@ -28,6 +30,7 @@ export const validateForm = () => {
   const isOkLinkValid = schemasFormValidation.ok.test(okInputValue);
   const isInstLinkValid = schemasFormValidation.inst.test(instInputValue);
   const isYoutubeLinkValid = schemasFormValidation.youtube.test(youtubeInputValue);
+  const isLeaderNameValid = schemasFormValidation.leader.test(leaderNameInputValue);
 
   const results = [
     isOrgNameValid,
@@ -73,7 +76,6 @@ export const validatePhoneNumber = () => {
       e.preventDefault();
     }
 
-
     if (input.selectionStart === 0 && e.key === 'Backspace') {
       e.preventDefault();
     }
@@ -81,7 +83,6 @@ export const validatePhoneNumber = () => {
 
   document.getElementsByName('telephone')[0].addEventListener('click', function (e) {
     let input = e.target;
-
 
     if (input.selectionStart < 3) {
       input.setSelectionRange(3, 3);

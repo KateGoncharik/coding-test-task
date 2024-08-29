@@ -48,7 +48,7 @@ const leaderNameInputData = {
   placeholder: 'Александров Иван Васильевич',
   label: 'Руководитель',
   className: 'leader-name-input',
-  hint: 'Must contain 1-20 chars',
+  hint: 'Must contain 1-40 chars',
 };
 
 const requiredInputsData = [
