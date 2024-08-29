@@ -190,7 +190,6 @@
   position: absolute;
   color: var(--white);
   padding: 50%;
-  background-color: var(--dark-grey);
   text-decoration: underline;
   display: none;
 }
