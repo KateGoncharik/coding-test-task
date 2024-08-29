@@ -1,11 +1,9 @@
 import { Component } from '../../component.js';
+import { createLabel } from './inputs.js';
 
 export const createUploadInput = () => {
-  const label = new Component(
-    { tag: 'label', className: 'upload-label' },
-    new Component({ tag: 'span', className: 'red', text: '✱' }),
-    new Component({ tag: 'span', className: 'input-label', text: 'Логотип (jpeg, png)' })
-  );
+  const label = createLabel(true, 'Логотип (jpeg, png)');
+
   label.setAttribute('for', 'upload');
 
   const input = new Component({ tag: 'input', className: 'upload-input' });

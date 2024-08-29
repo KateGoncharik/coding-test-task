@@ -1,4 +1,5 @@
 import { Component } from '../../component.js';
+import { createLabel } from './inputs.js';
 
 export const createSelect = () => {
   const economyOption = new Component({ tag: 'option', text: 'Экономика' });
@@ -12,11 +13,8 @@ export const createSelect = () => {
   sphereSelect.setAttribute('name', 'sphere');
   sphereSelect.setAttribute('required', true);
 
-  const label = new Component(
-    { tag: 'label', className: 'required-input-label' },
-    new Component({ tag: 'span', className: 'red', text: '✱' }),
-    new Component({ tag: 'span', className: 'input-label', text: 'Направление' })
-  );
+  const label = createLabel(true, 'Направление')
+ 
   label.setAttribute('for', 'sphere');
 
   return new Component({ className: 'required-input-wrapper' }, label, sphereSelect);
