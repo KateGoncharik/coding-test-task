@@ -8,6 +8,7 @@ const createBecomeMemberForm = () => {
     className: 'become-member-button',
     text: 'Стать партнёром проекта',
   });
+  becomeMemberButton.setAttribute('type', 'submit');
 
   becomeMemberButton.addListener('click', (e) => {
     e.preventDefault();
@@ -33,6 +34,7 @@ const createBecomeMemberForm = () => {
     className: 'cancel-button',
     text: 'Отменить',
   });
+  cancelButton.setAttribute('type', 'button');
 
   const closeModal = () => {
     const modal = document.querySelector('.dialog');
@@ -46,7 +48,6 @@ const createBecomeMemberForm = () => {
     createInputs(),
     new Component({ className: 'buttons-wrapper' }, becomeMemberButton, cancelButton)
   );
-  form.setAttribute('method', 'dialog');
   return form;
 };
 

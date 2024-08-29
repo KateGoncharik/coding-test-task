@@ -42,7 +42,7 @@
 .dialog {
   width: 58%;
   padding: 3% 0;
-  margin: 7% auto;
+  margin: 1% auto;
   border: none;
   border-radius: 10px;
 }
@@ -310,13 +310,19 @@
   width: 100%;
 }
 
-@media (max-width: 1100px) {
+@media screen and (min-height: 1500px){
+  .dialog {
+    margin: 7% auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
   .dialog {
     margin: 1% auto;
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .dialog {
     width: 70%;
   }
