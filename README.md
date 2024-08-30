@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <a href='https://github.com/KateGoncharik/coding-test-task.git'>
+  <a href='https://practice-2-table-generation.netlify.app/'>
   <img src='./src/assets/img/result.png'>
     <h1 align="center">Render data in table</h1>
   </a>
@@ -75,7 +75,7 @@ Check out deployment - [at netlify](https://practice-2-table-generation.netlify.
    sh
    npm install
 
-### Or checkout deployment [here](https://github.com/KateGoncharik/coding-test-task.git)
+### Or checkout deployment [here](https://practice-2-table-generation.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
