@@ -137,7 +137,6 @@
 .required-input {
   padding: 1.3rem 0 1rem 0.5rem;
   width: 100%;
-  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -146,6 +145,7 @@
   border: 1px solid var(--grey);
   border-radius: 4px;
   margin-top: 1rem;
+  font-size: 16px;
 }
 
 .red {
@@ -173,7 +173,7 @@
 .custom-upload-input {
   width: 175px;
   height: 175px;
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   position: relative;
   max-width: 200px;
   border-radius: 50%;
@@ -240,7 +240,6 @@
 .not-required-input {
   display: flex;
   padding: 5% 0.5rem;
-  font-size: 14px;
   background-size: 18px;
 }
 
@@ -347,7 +346,7 @@
     padding: 1.1rem 0 0.25rem 0.3rem;
   }
   .upload-input-wrapper {
-    width: 35%;
+    width: 45%;
   }
   .custom-upload-input {
     width: 135px;
@@ -357,6 +356,7 @@
     flex-direction: column;
     align-items: center;
   }
+  .not-required-input,
   .required-input {
     font-size: 14px;
   }
@@ -371,7 +371,7 @@
     font-size: 1rem;
   }
   .upload-input-wrapper {
-    width: 45%;
+    width: 50%;
   }
   .custom-upload-input {
     width: 115px;
