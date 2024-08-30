@@ -2,9 +2,8 @@
 
 <div align="center">
   <a href=''>
-
-    <h1 align="center">Coding test task</h1>
-
+  <img src='./src/assets/img/result.png'>
+    <h1 align="center">Render data in table</h1>
   </a>
 </div>
 
@@ -36,9 +35,11 @@
 
 _Completed: August 2024_
 
-Check out deployment - [at netlify](h)
+Check out deployment - [at netlify](https://practice-2-table-generation.netlify.app/)
 
-#### [Link to task from author](h)
+#### Task
+
+Реализовать JavaScript функцию, которая делает запрос к <https://jsonplaceholder.typicode.com/posts> и выводит на странице полученные данные в виде таблицы без использования сторонних библиотек.
 
 ### Technology stack
 
@@ -62,17 +63,19 @@ Check out deployment - [at netlify](h)
 
 ## Getting Started
 
-### Installation
+### Getting a local copy
 
 1. Clone the repo
 
    sh
-   git clone <>
+   git clone <https://github.com/KateGoncharik/coding-test-task.git>
 
 2. Install NPM packages
 
    sh
    npm install
+
+### Or checkout deployment [here](https://github.com/KateGoncharik/coding-test-task.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
